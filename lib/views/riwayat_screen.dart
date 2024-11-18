@@ -5,8 +5,8 @@ import 'package:intl/intl.dart';
 
 
 
-class HistoryScreen extends StatelessWidget{
-  const HistoryScreen({super.key});
+class RiwayatScreen extends StatelessWidget{
+  const RiwayatScreen({super.key});
   
   @override
   Widget build(BuildContext context) {

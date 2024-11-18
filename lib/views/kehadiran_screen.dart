@@ -3,8 +3,8 @@ import 'package:presensisiswa/provider/attendance_provider.dart';
 import 'package:provider/provider.dart';
 
 
-class AttendanceScreen extends StatelessWidget {
-  const AttendanceScreen({super.key});
+class KehadiranScreen extends StatelessWidget {
+  const KehadiranScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

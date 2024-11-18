@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'provider/attendance_provider.dart';
-import '../views/attendance_screen.dart';
-import '../views/history_screen.dart';
+import 'views/kehadiran_screen.dart';
+import 'views/riwayat_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -39,8 +39,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    const AttendanceScreen(),
-    const HistoryScreen(),
+    const KehadiranScreen(),
+    const RiwayatScreen(),
   ];
 
   @override

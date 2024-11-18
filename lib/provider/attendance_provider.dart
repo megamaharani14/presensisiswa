@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/attendance_record.dart';
+import '../models/catatan_kehadiran.dart';
 
 
 class AttendanceProvider extends ChangeNotifier {
@@ -7,9 +7,12 @@ class AttendanceProvider extends ChangeNotifier {
     {'name': 'Ali', 'isPresent': false},
     {'name': 'Budi', 'isPresent': false},
     {'name': 'Citra', 'isPresent': false},
+    {'name': 'Mega', 'isPresent': false},
+    {'name': 'Shinta', 'isPresent': false},
+    
   ];
 
-  final List<AttendanceRecord> _attendanceHistory = [];
+  final List<CatatanKehadiran> _attendanceHistory = [];
 
   final List<Map<String, dynamic>> _history = [];
 
