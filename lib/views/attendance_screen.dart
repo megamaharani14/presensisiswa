@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:presensisiswa/provider/attendance_provider.dart';
-
+import 'package:provider/provider.dart';
 
 
 class AttendanceScreen extends StatelessWidget {
@@ -12,18 +12,19 @@ class AttendanceScreen extends StatelessWidget {
     final students = attendanceProvider.students;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Pencatatan Kehadiran')),
+      appBar: AppBar(
+        title: const Text('Presensi Siswa')
+        ),
       body: ListView.builder(
         itemCount: students.length,
         itemBuilder: (contex, index) {
           final student = students[index];
           return ListTile(
-            title: Text(student.name),
+            title: Text(student['name']),
             trailing: Checkbox(
-              value: student.isPresent,
+              value: student['isPresent'],
               onChanged: (value) {
-                student.isPresent = value ?? false;
-                attendanceProvider.notifyListeners();
+                attendanceProvider.replaceAttendance(index);
               },
             ),
           );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../provider/attendance_provider.dart';
+import 'provider/attendance_provider.dart';
 import '../views/attendance_screen.dart';
 import '../views/history_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
@@ -12,7 +12,7 @@ void main() {
       ],
       child: const MyApp(),
     ),
-    );
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,24 +20,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => AttendanceProvider(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const BottomNavigation(),
+    return MaterialApp(
+     title: 'Presensi Siswa',
+      theme: ThemeData (primarySwatch: Colors.blue,
       ),
+      home: const HomeScreen(),
     );
   }
 }
 
-class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     const AttendanceScreen(),

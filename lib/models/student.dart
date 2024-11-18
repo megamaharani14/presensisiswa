@@ -1,5 +1,5 @@
 class Siswa {
-  String name;
+  final String name;
   bool isPresent;
 
   Siswa({required this.name,this.isPresent =false });

@@ -33,7 +33,7 @@ class AttendanceProvider extends ChangeNotifier {
     });
 
     for (var student in _students) {
-      student['isPresent'] = false;
+      student['isPrsent'] = false;
     }
     notifyListeners();
   }
