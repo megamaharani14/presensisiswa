@@ -1,8 +1,8 @@
 class CatatanKehadiran {
   DateTime date;
   int presentCount;
-  int absenCouunt;
+  int absenCount;
 
-  CatatanKehadiran({required this.date, required this.presentCount, required this.absenCouunt,
+  CatatanKehadiran({required this.date, required this.presentCount, required this.absenCount,
   });
 }
